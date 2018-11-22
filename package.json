@@ -1,0 +1,30 @@
+{
+  "name": "fastify-http2https",
+  "version": "0.0.1",
+  "description": "Redirect clear HTTP requests to HTTPS, both using the same port for Fastify",
+  "source": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "Fastify",
+    "http",
+    "redirect"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lolo32/fastify-http2https.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lolo_32",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "fastify": "*"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "typescript": "~3.1.6"
+  }
+}
