@@ -41,7 +41,7 @@ All options in `https` is literally passed to `https.createServer` or
 
 ### HTTP/1
 
-#### Typical options
+Typical options
 
 ```javascript
 {
@@ -55,7 +55,7 @@ All options in `https` is literally passed to `https.createServer` or
 
 ### HTTP/2
 
-#### Typical options
+Typical options
 
 ```javascript
 {
@@ -71,7 +71,7 @@ All options in `https` is literally passed to `https.createServer` or
 
 ### Full exemple
 
-#### Code
+Code
 
 ```javascript
 const http2https = require("fastify-http2https")
@@ -121,21 +121,21 @@ app.listen(3000, function (err, address) {
 })
 ```
 
-#### Results
+Results
 
-##### Using nothing (default) or `http2httpsOptionsRedirect`
+* Using nothing (default) or `http2httpsOptionsRedirect`
 
-Now, all requests to `http://localhost:3000/some/thing?or=not`
-are regirected to `http://localhost:3000/some/thing?or=not`
-with a `301 Moved Permanently`.
+  Now, all requests to `http://localhost:3000/some/thing?or=not`
+  are regirected to `http://localhost:3000/some/thing?or=not`
+  with a `301 Moved Permanently`.
 
-##### Using `http2httpsOptionsHttpToo`
+* Using `http2httpsOptionsHttpToo`
 
-Both HTTP and HTTPS send the same, work with `Fastify` instance, all
-without any redirection.
+  Both HTTP and HTTPS send the same, work with `Fastify` instance, all
+  without any redirection.
 
-##### Using `http2httpsOptionsHelloWorld`
+* Using `http2httpsOptionsHelloWorld`
 
-To respond to HTTP requests, the user's define callback will be used.
-HTTPS is responded by `Fastify`.
+  To respond to HTTP requests, the user's define callback will be used.
+  HTTPS is responded by `Fastify`.
 `
