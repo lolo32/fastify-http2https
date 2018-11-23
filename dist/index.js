@@ -3,7 +3,7 @@ var http2 = require("http2");
 var https = require("https");
 var net = require("net");
 
-exports.default = (function (options) {
+module.exports = (function (options) {
     if (options === void 0) { options = {}; }
     var httpsRedirect = function (req, res) {
         var host = req.headers.host;
@@ -16,14 +16,14 @@ exports.default = (function (options) {
         }
         var httpHandler = options.handler || httpsRedirect;
         var secur;
-        var clear = http.default.createServer(httpHandler);
+        var clear = http.createServer(httpHandler);
         if (opts.http2) {
-            secur = http2.default.createSecureServer(opts.https, fastifyHandler);
+            secur = http2.createSecureServer(opts.https, fastifyHandler);
         }
         else {
-            secur = https.default.createServer(opts.https, fastifyHandler);
+            secur = https.createServer(opts.https, fastifyHandler);
         }
-        return net.default.createServer(function (socket) {
+        return net.createServer(function (socket) {
             socket.once("data", function (buffer) {
                 socket.pause();
                 var byte = buffer[0];
