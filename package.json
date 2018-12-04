@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc --reporter=html --reporter=text --extension .js --extension .ts mocha --require ts-node/register --ui=tdd test/*.ts test/*.js"
   },
   "author": "Lolo_32",
   "license": "Apache-2.0",
@@ -24,7 +24,13 @@
     "fastify": "*"
   },
   "devDependencies": {
+    "@types/mocha": "latest",
     "@types/node": "latest",
-    "typescript": "~3.1.6"
+    "@types/supertest": "2.0.7",
+    "fastify": "1.13.1",
+    "mocha": "5.2.0",
+    "nyc": "13.1.0",
+    "supertest": "3.3.0",
+    "typescript": "3.2.1"
   }
 }
