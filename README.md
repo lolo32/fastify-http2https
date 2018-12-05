@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/lolo32/fastify-http2https.svg?branch=master)](https://travis-ci.org/lolo32/fastify-http2https)
 [![codecov](https://codecov.io/gh/lolo32/fastify-http2https/branch/master/graph/badge.svg)](https://codecov.io/gh/lolo32/fastify-http2https)
+[![Known Vulnerabilities](https://snyk.io/test/github/lolo32/fastify-http2https/badge.svg?targetFile=package.json)](https://snyk.io/test/github/lolo32/fastify-http2https?targetFile=package.json)
 
 This plugin redirect all requests that come to the port where `Fastify` listen, if the
 query if in `http`, and send back a `301 Moved Permanently` to the same port,
