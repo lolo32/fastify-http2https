@@ -1,5 +1,8 @@
 # Fastify-Http2Https
 
+[![Build Status](https://travis-ci.org/lolo32/fastify-http2https.svg?branch=master)](https://travis-ci.org/lolo32/fastify-http2https)
+[![Coverage Status](https://coveralls.io/repos/github/lolo32/fastify-http2https/badge.svg?branch=master)](https://coveralls.io/github/lolo32/fastify-http2https?branch=master)
+
 This plugin redirect all requests that come to the port where `Fastify` listen, if the
 query if in `http`, and send back a `301 Moved Permanently` to the same port,
 same hostname, but this time with `https`.
