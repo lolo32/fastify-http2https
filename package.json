@@ -1,6 +1,6 @@
 {
   "name": "fastify-http2https",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Redirect clear HTTP requests to HTTPS, both using the same port for Fastify",
   "source": "index.ts",
   "main": "dist/index.js",
