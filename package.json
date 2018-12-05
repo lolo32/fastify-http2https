@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "coverage": "nyc report --reporter=text-lcov && nyc report --reporter=text-lcov | coveralls",
     "test": "nyc --extension .js --extension .ts mocha --require ts-node/register --ui=tdd test/*.ts test/*.js",
     "benchmark": "npm run benchmark:vanilla && npm run benchmark:redirect",
     "benchmark:vanilla": "concurrently -k -s first \"node ./benchmark/without.js\" \"autocannon -c 100 -d 5 -p 10 https://localhost:3000/\"",
