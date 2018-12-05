@@ -4,7 +4,7 @@ import * as http from "http"
 import "mocha"
 import {AddressInfo} from "net"
 import supertest from "supertest"
-import http2https from ".."
+import http2https from "../index"
 
 // Disable self-signed certificate check
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
