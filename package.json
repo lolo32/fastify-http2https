@@ -16,7 +16,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "nyc --reporter=html --reporter=text --extension .js --extension .ts mocha --require ts-node/register --ui=tdd test/*.ts test/*.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc --extension .js --extension .ts mocha --require ts-node/register --ui=tdd test/*.ts test/*.js",
     "benchmark": "npm run benchmark:vanilla && npm run benchmark:redirect",
     "benchmark:vanilla": "concurrently -k -s first \"node ./benchmark/without.js\" \"autocannon -c 100 -d 5 -p 10 https://localhost:3000/\"",
     "benchmark:redirect": "concurrently -k -s first \"node ./benchmark/with.js\" \"autocannon -c 100 -d 5 -p 10 https://localhost:3000/\""
@@ -32,6 +33,7 @@
     "@types/supertest": "2.0.7",
     "autocannon": "3.2.0",
     "concurrently": "4.1.0",
+    "coveralls": "3.0.2",
     "fastify": "1.13.1",
     "mocha": "5.2.0",
     "nyc": "13.1.0",
