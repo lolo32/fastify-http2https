@@ -20,7 +20,9 @@
     "test": "nyc --extension .js --extension .ts mocha --require ts-node/register --ui=tdd test/*.ts test/*.js",
     "benchmark": "npm run benchmark:vanilla && npm run benchmark:redirect",
     "benchmark:vanilla": "concurrently -k -s first \"node ./benchmark/without.js\" \"autocannon -c 100 -d 5 -p 10 https://localhost:3000/\"",
-    "benchmark:redirect": "concurrently -k -s first \"node ./benchmark/with.js\" \"autocannon -c 100 -d 5 -p 10 https://localhost:3000/\""
+    "benchmark:redirect": "concurrently -k -s first \"node ./benchmark/with.js\" \"autocannon -c 100 -d 5 -p 10 https://localhost:3000/\"",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Lolo_32",
   "license": "Apache-2.0",
@@ -40,5 +42,9 @@
     "supertest": "3.3.0",
     "ts-node": "7.0.1",
     "typescript": "3.2.1"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.189.0"
   }
 }
