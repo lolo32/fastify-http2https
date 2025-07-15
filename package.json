@@ -34,9 +34,9 @@
     "autocannon": "3.2.0",
     "codecov": "3.1.0",
     "concurrently": "4.1.0",
-    "fastify": "1.13.1",
+    "fastify": "4.26.0",
     "mocha": "5.2.0",
-    "nyc": "13.1.0",
+    "nyc": "15.0.0",
     "supertest": "3.3.0",
     "ts-node": "7.0.1",
     "typescript": "3.2.1"
